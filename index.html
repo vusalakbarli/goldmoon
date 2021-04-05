@@ -9,6 +9,9 @@
 
 	<!-- begin::css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/fontawesome.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/brands.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/solid.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
 	<!-- end::css -->
 
@@ -25,7 +28,100 @@
 
 
 			<!-- begin:header -->
-			<header class="p-3 mb-3 border-bottom">
+
+			<nav class="navbar navbar-expand-md navbar-light menu-bg" aria-label="Fourth navbar example">
+			    <div class="container">
+			        <a class="navbar-brand menu-text" href="#">GoldMoon</a>
+			        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+			        <span class="navbar-toggler-icon"></span>
+			        </button>
+			        <div class="collapse navbar-collapse" id="navbarsExample04">
+				      	<div class="col-lg-7">
+					        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+					          <li class="nav-item">
+					            <a class="nav-link active menu-text" aria-current="page" href="#">
+					            	<span class="icon">
+					            		<i class="fas fa-home"></i>
+					            	</span>
+					            	<span>Əsas səhifə</span></a>
+					          </li>
+					          <!-- <li class="nav-item">
+					            <a class="nav-link" href="#">Link</a>
+					          </li> -->
+					          <!-- <li class="nav-item">
+					            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					          </li> -->
+					          		<li class="nav-item dropdown">
+					          			<a class="nav-link active menu-text dropdown-toggle" data-bs-toggle="dropdown" href="#">
+							            	<span class="icon">
+							            		<i class="fas fa-swatchbook"></i>
+							            	</span>
+							            	<span>Kitabxanalar</span>
+						            	</a>
+									    <ul class="dropdown-menu">
+										  <li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
+										  <li><a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+										  	 <ul class="submenu dropdown-menu">
+											    <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+											    <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+											    <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+											    	<ul class="submenu dropdown-menu">
+													    <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+													    <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+													</ul>
+											    </li>
+											    <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+											    <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+											 </ul>
+										  </li>
+										  <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
+										  <li><a class="dropdown-item" href="#"> Dropdown item 4 </a>
+									    </ul>
+									</li>
+					        </ul>
+					        
+				        </div>
+				        <div class="col-lg-2">
+				        	<form class="quick-search-form">
+		          				<!-- <input class="form-control" type="text" placeholder="Axtar.." aria-label="Search"> -->
+		          				<div class="input-group">
+					               <div class="input-group-prepend">
+					                  <a href="#search" class="input-group-text menu-text">
+					                  	
+					                        <i class="fas fa-search" for="search"></i>
+					                  </a>
+					               </div>
+					               <input id="search" type="text" class="form-control" placeholder="Axtar...">
+					               
+					            </div>
+		        			</form>	
+					    </div>
+					        
+				        <div class="col-lg-3 ">
+
+				        	<div class="dropdown float-end">
+				        		
+						        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle menu" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+						          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+						          <span class="menu-text">Vusal</span>
+						        </a>
+						        <ul class="dropdown-menu text-small float-end" aria-labelledby="dropdownUser1" style="">
+						          <li><a class="dropdown-item" href="#">Yeni sənəd..</a></li>
+						          <li><a class="dropdown-item" href="#">Parametrlər</a></li>
+						          <li><a class="dropdown-item" href="#">Profil</a></li>
+						          <li><hr class="dropdown-divider"></li>
+						          <li><a class="dropdown-item" href="#">Çıxış</a></li>
+						        </ul>
+						    </div>
+				        </div>
+			        
+			      </div>
+			    </div>
+			  </nav>
+
+
+
+<!-- 		<header class="p-3 mb-3 border-bottom">
 			  <div class="container">
 			    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 			      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -57,21 +153,62 @@
 			      </div>
 			    </div>
 			  </div>
-			</header>
+			</header> 
+
+ -->
+
+
 			<!-- end:header -->
+
+			
+
+
 			
 		</div>		
 	</div>
+
+	<!-- begin::content -->
+			<div class="content d-flex flex-column flex-column-fluid mt-6">
+				<div class="container">
+					<div class="cards">
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+						  </li>
+						  <li class="nav-item" role="presentation">
+						    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+						  </li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+						  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+						  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+						  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end::content -->
 	</main>
 	<!-- end::main -->
-	
+
 
 
 	<!-- begin:scripts -->
-	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/bootstrap.js"></script> -->
 	<script type="text/javascript" src="assets/js/bootstrap.bundle.js"></script>
-	<script type="text/javascript" src="assets/js/jquery-3-2-1.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-3-2-1.min.js"></script><!-- 
+	<script type="text/javascript" src="assets/js/fontawesome.js"></script>
+	<script type="text/javascript" src="assets/js/brands.js"></script>
+	<script type="text/javascript" src="assets/js/solid.js"></script> -->
+	<script type="text/javascript" src="assets/js/main.js"></script>
 	<!-- end:scripts -->
+
+
+
+
 </body>
 <!--end::Body-->
 </html>
