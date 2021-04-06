@@ -139,10 +139,11 @@ a {
   color: #3f4254;
 }
 
-
+.dropdown-item.active,
 .dropdown-item:hover, .dropdown-item:focus .dropdown-item.active, .dropdown-item:active
 {
   background-color: transparent; !important;
+  color: #1e90ff !important;
 }
 
 
@@ -350,6 +351,7 @@ ul.dropdown-menu {
     background-clip: border-box;
     border: 1px solid #ebedf3;
     border-radius: .42rem;
+    min-height: 500px;
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
@@ -366,3 +368,5 @@ ul.dropdown-menu {
 .nav-tabs li {
   float: right !important;
 }
+
+
