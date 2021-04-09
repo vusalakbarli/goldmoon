@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/brands.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/solid.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css"/> 
 	<!-- end::css -->
 
 	<link rel="shortcut icon" href="assets/media/favicon.ico" />
@@ -100,7 +101,7 @@
 												    	</a>
 												    </li>
 												    <li>
-												    	<a class="dropdown-item menu-text" href="list-city.html">
+												    	<a class="dropdown-item menu-text" href="ıist-country.html">
 												    		<span class="icon"><i class="fas fa-stream"></i></span>
 												    		<span>Siyahı</span>
 												    	</a>
@@ -318,34 +319,44 @@
   				<!-- begin::cards -->
 				<div class="cards">
 					<div class="card-header">
-						<h3>Ölkə Əlavə Et</h3>
+						<h3>Şəhərlərin Siyahısı</h3>
+						<div class="float-end" >
+							<button id="save" type="button" class="btn btn-primary btn-md">Yeni</button>
+						</div>
 					</div>
 					<div class="card-body">
-						<form>
-						  <div class="form-group">
-						  	<div class="col-md-12">
-						  		<label for="exampleFormControlFile1">Fayl yüklə</label>
-						    	<input type="file" class="form-control-file" id="exampleFormControlFile1">
-						    	<hr>
-						  	</div>
+				
 
-						    
-						  	<div class="row justify-content-md-center pt-5">
-						  		<div class="col-md-4">
-						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Ölkə adı</label>
-    								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
-    								<small id="CountryHelp" class="form-text text-muted">Azərbaycan dilində yazıımalıdır</small>								
-						  		</div>
-<!-- 
-						  		<div class="col-md-4">
-						  			<label for="exampleFormControlInput1">Ölkə Seriyası</label>
-    								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
-    								<small id="CountryHelp" class="form-text text-muted">Qısa yazılmalıdır (maksimum 3 hərf)</small>  								
-						  		</div> -->
-						  		
-						  	</div>						    
-						  </div>
-						</form>
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Şəhər</th>
+				      <th scope="col">Ölkə</th>
+				      <th scope="col">Sayğac</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Bakı</td>
+				      <td>Azərbaycan</td>
+				      <td>0</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Şanxay</td>
+				      <td>Çin</td>
+				      <td>654</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Ankara</td>
+				      <td>Türkiyə</td>
+				      <td>300</td>
+				    </tr>
+				  </tbody>
+				</table>
 						
 					</div>
 					<div class="card-footer pt-4">
@@ -370,10 +381,7 @@
 
 						</div>
 						<div class="col-md-4">
-							<div class="float-end" >
-								<button id="save" type="button" class="btn btn-success btn-md close" data-dismiss="alert" aria-label="Close">Saxla</button>
-								<button type="button" class="btn btn-danger btn-md">İmtina</button>
-							</div>
+							
 							
 						</div>						
 					</div>
@@ -394,9 +402,7 @@
 				</div>				
 			</div>
 		</div>
-		<div class="col-md-3 fixed-tr float-end alert alert-success hidden" role="alert" id="saved">
-		  Yadda saxlanıldı!
-		</div>
+		
 	</footer>
 
 

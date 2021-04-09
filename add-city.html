@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/brands.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/solid.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css"/> 
 	<!-- end::css -->
 
 	<link rel="shortcut icon" href="assets/media/favicon.ico" />
@@ -318,7 +319,7 @@
   				<!-- begin::cards -->
 				<div class="cards">
 					<div class="card-header">
-						<h3>Ölkə Əlavə Et</h3>
+						<h3>Şəhər Əlavə Et</h3>
 					</div>
 					<div class="card-body">
 						<form>
@@ -332,16 +333,20 @@
 						    
 						  	<div class="row justify-content-md-center pt-5">
 						  		<div class="col-md-4">
-						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Ölkə adı</label>
+						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Şəhər adı</label>
     								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
     								<small id="CountryHelp" class="form-text text-muted">Azərbaycan dilində yazıımalıdır</small>								
 						  		</div>
-<!-- 
+
 						  		<div class="col-md-4">
-						  			<label for="exampleFormControlInput1">Ölkə Seriyası</label>
-    								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
-    								<small id="CountryHelp" class="form-text text-muted">Qısa yazılmalıdır (maksimum 3 hərf)</small>  								
-						  		</div> -->
+						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Aid olduğu ölkə</label>
+						  			<select class="form-select" aria-label="Default select example">
+										<option selected>Azərbaycan</option>
+										<option value="1">Türkiyə</option>
+										<option value="2">Rusiya</option>
+										<option value="3">Çin</option>
+									</select>				
+						  		</div>
 						  		
 						  	</div>						    
 						  </div>

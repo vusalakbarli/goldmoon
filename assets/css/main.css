@@ -370,3 +370,15 @@ ul.dropdown-menu {
 }
 
 
+.card-header, .card-footer {
+  background-color: transparent !important;
+}
+
+.hidden {
+  display: none;
+}
+.fixed-tr {
+  position: fixed !important;
+  top: 65px !important;
+  right: 0 !important;
+}
