@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/brands.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/solid.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css"/> 
 	<!-- end::css -->
 
 	<link rel="shortcut icon" href="assets/media/favicon.ico" />
@@ -318,34 +319,72 @@
   				<!-- begin::cards -->
 				<div class="cards">
 					<div class="card-header">
-						<h3>Ölkə Əlavə Et</h3>
+						<h3>Regionların Siyahısı</h3>
+						<div class="float-end" >
+							<button id="save" type="button" class="btn btn-primary btn-md">Yeni</button>
+						</div>
 					</div>
 					<div class="card-body">
-						<form>
-						  <div class="form-group">
-						  	<div class="col-md-12">
-						  		<label for="exampleFormControlFile1">Fayl yüklə</label>
-						    	<input type="file" class="form-control-file" id="exampleFormControlFile1">
-						    	<hr>
-						  	</div>
+				
 
-						    
-						  	<div class="row justify-content-md-center pt-5">
-						  		<div class="col-md-4">
-						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Ölkə adı</label>
-    								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
-    								<small id="CountryHelp" class="form-text text-muted">Azərbaycan dilində yazıımalıdır</small>								
-						  		</div>
-<!-- 
-						  		<div class="col-md-4">
-						  			<label for="exampleFormControlInput1">Ölkə Seriyası</label>
-    								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
-    								<small id="CountryHelp" class="form-text text-muted">Qısa yazılmalıdır (maksimum 3 hərf)</small>  								
-						  		</div> -->
-						  		
-						  	</div>						    
-						  </div>
-						</form>
+				<table class="table text-center">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th style="width:350px;" scope="col">Region</th>
+				      <th scope="col">Ölkə</th>
+				      <th scope="col">Şəhərlər</th>
+				      <th scope="col"></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">1</th>
+				      <td>Abşeron</td>
+				      <td>Azərbaycan</td>
+				      <td>1</td>
+				      <td class="text-end">
+			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
+			                <i class="fas fa-edit fa-sm text-warning"></i>
+			             </a>
+			             <a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			                <i class="fas fa-trash fa-sm text-danger"></i>
+			             </a>
+			          </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Cənub</td>
+				      <td>Azərbaycan</td>
+				      <td>2</td>
+				      <td class="text-end">
+			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
+			                <i class="fas fa-edit fa-sm text-warning"></i>
+			             </a>
+			             <a id="delete2" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			                <i class="fas fa-trash fa-sm text-danger"></i>
+			             </a>
+			          </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td>Muğan</td>
+				      <td>Azərbaycan</td>
+				      <td>4</td>
+				      <td class="text-end">
+			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
+			                <i class="fas fa-edit fa-sm text-warning"></i>
+			             </a>
+			             <a id="delete3" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			                <i class="fas fa-trash fa-sm text-danger"></i>
+			             </a>
+			          </td>
+				    </tr>
+				  </tbody>
+				</table>
+
+
+
 						
 					</div>
 					<div class="card-footer pt-4">
@@ -370,10 +409,7 @@
 
 						</div>
 						<div class="col-md-4">
-							<div class="float-end" >
-								<button id="save" type="button" class="btn btn-success btn-md close" data-dismiss="alert" aria-label="Close">Saxla</button>
-								<button type="button" class="btn btn-danger btn-md">İmtina</button>
-							</div>
+							
 							
 						</div>						
 					</div>
@@ -394,11 +430,32 @@
 				</div>				
 			</div>
 		</div>
-		<div class="col-md-3 fixed-tr float-end alert alert-success hidden" role="alert" id="saved">
+		<div class="col-md-3 fixed-tr float-end alert alert-success hidden" role="alertsaved" id="saved">
 		  Yadda saxlanıldı!
+		</div>
+		<div class="col-md-3 fixed-tr float-end alert alert-danger hidden" role="alertdeleted" id="deleted">
+		  Uğurla silindi!
 		</div>
 	</footer>
 
+	<!-- Modal -->
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Əminsiniz?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Seçdiyiniz məlumatlar silinsin?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İmtina</button>
+        <button type="submit" class="btn btn-danger" data-bs-dismiss="alert" id="deleteOk">Sil</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -432,6 +489,30 @@
     });
     */
   });
+
+
+    $("#delete, #delete2, #delete3").click(function(){
+
+    	$('#deleteModal').modal('show');
+  });
+
+    $("#deleteOk").click(function showdeleted() {
+
+    $("#deleteModal").modal('hide');
+
+	    setTimeout(function(){
+
+		    $("div#deleted").fadeIn( "slow").fadeOut(3000);
+		}, 1000);
+		  
+
+  });
+
+
+
+
+
+
 });
 </script>
 
