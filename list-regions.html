@@ -14,6 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/solid.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css"/> 
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-table.min.css"/>
 	<!-- end::css -->
 
 	<link rel="shortcut icon" href="assets/media/favicon.ico" />
@@ -264,51 +265,7 @@
 			    </div>
 			  </nav>
 
-
-
-<!-- 		<header class="p-3 mb-3 border-bottom">
-			  <div class="container">
-			    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-			      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-			        <img class="bi me-2" width="150px" height="auto" src="assets/media/logo.png">
-			      </a>
-
-			      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-			        <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-			        <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
-			        <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
-			        <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
-			      </ul>
-
-			      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-			        <input type="search" class="form-control" placeholder="Search...">
-			      </form>
-
-			      <div class="dropdown text-end">
-			        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-			          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-			        </a>
-			        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
-			          <li><a class="dropdown-item" href="#">New project...</a></li>
-			          <li><a class="dropdown-item" href="#">Settings</a></li>
-			          <li><a class="dropdown-item" href="#">Profile</a></li>
-			          <li><hr class="dropdown-divider"></li>
-			          <li><a class="dropdown-item" href="#">Sign out</a></li>
-			        </ul>
-			      </div>
-			    </div>
-			  </div>
-			</header> 
-
- -->
-
-
-			<!-- end:header -->
-
-			
-
-
-			
+		
 		</div>		
 	</div>
 
@@ -318,31 +275,47 @@
   			<div class="row">
   				<!-- begin::cards -->
 				<div class="cards">
-					<div class="card-header">
-						<h3>Regionların Siyahısı</h3>
-						<div class="float-end" >
-							<button id="save" type="button" class="btn btn-primary btn-md">Yeni</button>
+					<div class="card-header pt-3">
+						<h3 class="col-md-4">Bölgələrin Siyahısı</h3>
+						<div class="col float-end" >
+							<button id="save" type="button" class="btn btn-primary btn-md float-end">Yeni</button>
 						</div>
+						<!-- <div class="col-md-7 float-end me-3">
+							<input class="form-control float-end" style="width: 200px;" type="text" id="tablesearch" onkeyup="myFunction()" placeholder="Axtar..">
+						
+						</div>
+						 -->
 					</div>
 					<div class="card-body">
 				
 
-				<table class="table text-center">
+				<table id="table" class="table table-hover text-center"
+				data-toggle="table"
+				data-sort-name="order"
+				data-sort-order="asc"
+				data-search="true"
+				data-search-placeholder="Axtar"
+				data-show-columns="true">
+				
 				  <thead>
 				    <tr>
-				      <th scope="col">#</th>
-				      <th style="width:350px;" scope="col">Region</th>
-				      <th scope="col">Ölkə</th>
-				      <th scope="col">Şəhərlər</th>
+				      <th scope="col" data-field="order" data-sortable="true" >#</th>
+				      <th style="width:350px;" scope="col" data-field="region" data-sortable="true">Region</th>
+				      <th scope="col" data-field="country" data-sortable="true">Ölkə</th>
+				      <th scope="col" data-field="city" data-sortable="true">Şəhərlər</th>
+				      <th scope="col" data-field="counter" style="width:200px; text-align: right;" data-sortable="true">Sayğaclar</th>
 				      <th scope="col"></th>
 				    </tr>
+
+				
 				  </thead>
 				  <tbody>
 				    <tr>
 				      <th scope="row">1</th>
-				      <td>Abşeron</td>
+				      <td class="">Bakı</td>
 				      <td>Azərbaycan</td>
 				      <td>1</td>
+				      <td class="text-end">1524354</td>
 				      <td class="text-end">
 			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
 			                <i class="fas fa-edit fa-sm text-warning"></i>
@@ -354,9 +327,10 @@
 				    </tr>
 				    <tr>
 				      <th scope="row">2</th>
-				      <td>Cənub</td>
+				      <td>Abşeron</td>
 				      <td>Azərbaycan</td>
-				      <td>2</td>
+				      <td>4</td>
+				      <td class="text-end">824354</td>
 				      <td class="text-end">
 			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
 			                <i class="fas fa-edit fa-sm text-warning"></i>
@@ -368,9 +342,55 @@
 				    </tr>
 				    <tr>
 				      <th scope="row">3</th>
-				      <td>Muğan</td>
+				      <td>Quba-Xaçmaz</td>
+				      <td>Azərbaycan</td>
+				      <td>6</td>
+				      <td class="text-end">9872</td>
+				      <td class="text-end">
+			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
+			                <i class="fas fa-edit fa-sm text-warning"></i>
+			             </a>
+			             <a id="delete3" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			                <i class="fas fa-trash fa-sm text-danger"></i>
+			             </a>
+			          </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">4</th>
+				      <td>Dağlıq Şirvan</td>
 				      <td>Azərbaycan</td>
 				      <td>4</td>
+				      <td class="text-end">6101</td>
+				      <td class="text-end">
+			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
+			                <i class="fas fa-edit fa-sm text-warning"></i>
+			             </a>
+			             <a id="delete3" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			                <i class="fas fa-trash fa-sm text-danger"></i>
+			             </a>
+			          </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">5</th>
+				      <td>Şəki-Zaqatala</td>
+				      <td>Azərbaycan</td>
+				      <td>6</td>
+				      <td class="text-end">7807</td>
+				      <td class="text-end">
+			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
+			                <i class="fas fa-edit fa-sm text-warning"></i>
+			             </a>
+			             <a id="delete3" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			                <i class="fas fa-trash fa-sm text-danger"></i>
+			             </a>
+			          </td>
+				    </tr>
+				    <tr>
+				      <th scope="row">6</th>
+				      <td>Gəncə-Qazax</td>
+				      <td>Azərbaycan</td>
+				      <td>13</td>
+				      <td class="text-end">123045</td>
 				      <td class="text-end">
 			             <a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et">
 			                <i class="fas fa-edit fa-sm text-warning"></i>
@@ -475,6 +495,9 @@
 	<script type="text/javascript" src="assets/js/solid.js"></script> -->
 	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-table.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-table-az-AZ.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-table-export.min.js"></script>
 	<!-- end:scripts -->
 
 <script type="text/javascript">

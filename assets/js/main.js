@@ -69,3 +69,45 @@ $(window).on("load resize", function() {
 
   }); 
   // DOMContentLoaded  end
+
+
+
+/*
+$(document).ready(function () {
+  $('#regions').DataTable();
+  $('.regions_length').addClass('bs-select');
+  });*/
+
+
+
+
+ // <!-- begin::live-search -->
+/*  function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("tablesearch");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("table");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }*/
+//<!-- end::live-search -->
+
+
+
+ function responseHandler(res) {
+    $.each(res.rows, function (i, row) {
+      row.state = $.inArray(row.id, selections) !== -1
+    })
+    return res
+  }

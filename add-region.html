@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/brands.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/solid.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css"/> 
 	<!-- end::css -->
 
 	<link rel="shortcut icon" href="assets/media/favicon.ico" />
@@ -80,7 +81,7 @@
 												    	</a>
 												    </li>
 												    <li>
-												    	<a class="dropdown-item menu-text" href="list-countries.html">
+												    	<a class="dropdown-item menu-text" href="list-country.html">
 												    		<span class="icon"><i class="fas fa-stream"></i></span>
 												    		<span>Siyahı</span>
 												    	</a>
@@ -318,7 +319,7 @@
   				<!-- begin::cards -->
 				<div class="cards">
 					<div class="card-header pt-3">
-						<h3>Ölkə Əlavə Et</h3>
+						<h3>Region Əlavə Et</h3>
 					</div>
 					<div class="card-body">
 						<form>
@@ -332,16 +333,22 @@
 						    
 						  	<div class="row justify-content-md-center pt-5">
 						  		<div class="col-md-4">
-						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Ölkə adı</label>
+						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Bölgə adı</label>
     								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
     								<small id="CountryHelp" class="form-text text-muted">Azərbaycan dilində yazıımalıdır</small>								
 						  		</div>
-<!-- 
+
 						  		<div class="col-md-4">
-						  			<label for="exampleFormControlInput1">Ölkə Seriyası</label>
-    								<input type="text" class="form-control" id="CountryName" placeholder="Ölkə adını daxil edin">
-    								<small id="CountryHelp" class="form-text text-muted">Qısa yazılmalıdır (maksimum 3 hərf)</small>  								
-						  		</div> -->
+						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Aid olduğu ölkə</label>
+						  			<select class="form-select" aria-label="Default select example">
+										<option selected>Azərbaycan</option>
+										<option value="1">Türkiyə</option>
+										<option value="2">Rusiya</option>
+										<option value="3">Çin</option>
+									</select>				
+						  		</div>
+
+
 						  		
 						  	</div>						    
 						  </div>
@@ -355,7 +362,8 @@
 							    <li class="page-item disabled"><a class="page-link" href="#">Əvvəlki</a></li>
 							    <li class="page-item active"><a class="page-link" href="#">1</a></li>
 							    <li class="page-item"><a class="page-link" href="#">2</a></li>
-							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item"><a class="page-lin
+							    	k" href="#">3</a></li>
 							    <li class="page-item"><a class="page-link" href="#">Növbəti</a></li>
 							  </ul>
 							</nav>
@@ -371,7 +379,7 @@
 						</div>
 						<div class="col-md-4">
 							<div class="float-end" >
-								<button id="save" type="button" class="btn btn-success btn-md close" data-dismiss="alert" aria-label="Close">Saxla</button>
+								<button id="save" type="button" class="btn btn-success btn-md close" data-dismiss="alertsaved" aria-label="Close">Saxla</button>
 								<button type="button" class="btn btn-danger btn-md">İmtina</button>
 							</div>
 							
@@ -394,7 +402,10 @@
 				</div>				
 			</div>
 		</div>
-		<div class="col-md-3 fixed-tr float-end alert alert-success hidden" role="alert" id="saved">
+		<div class="col-md-3 fixed-tr float-end alert alert-success hidden" role="alertsaved" id="saved">
+		  Yadda saxlanıldı!
+		</div>
+		<div class="col-md-3 fixed-tr float-end alert alert-danger hidden" role="alertdeleted" id="saved">
 		  Yadda saxlanıldı!
 		</div>
 	</footer>

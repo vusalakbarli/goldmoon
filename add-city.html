@@ -101,7 +101,7 @@
 												    	</a>
 												    </li>
 												    <li>
-												    	<a class="dropdown-item menu-text" href="list-city.html">
+												    	<a class="dropdown-item menu-text" href="list-cities.html">
 												    		<span class="icon"><i class="fas fa-stream"></i></span>
 												    		<span>Siyahı</span>
 												    	</a>
@@ -115,13 +115,13 @@
 										    	</a>
 										    	<ul class="submenu dropdown-menu">
 												    <li>
-												    	<a class="dropdown-item menu-text" href="#">
+												    	<a class="dropdown-item menu-text" href="add-region.html">
 												    		<span class="icon"><i class="fas fa-map-pin"></i></span>
 												    		<span>Əlavə et</span>
 												    	</a>
 												    </li>
 												    <li>
-												    	<a class="dropdown-item menu-text" href="#">
+												    	<a class="dropdown-item menu-text" href="list-regions.html">
 												    		<span class="icon"><i class="fas fa-stream"></i></span>
 												    		<span>Siyahı</span>
 												    	</a>
@@ -318,7 +318,7 @@
   			<div class="row">
   				<!-- begin::cards -->
 				<div class="cards">
-					<div class="card-header">
+					<div class="card-header pt-3">
 						<h3>Şəhər Əlavə Et</h3>
 					</div>
 					<div class="card-body">
@@ -339,8 +339,8 @@
 						  		</div>
 
 						  		<div class="col-md-4">
-						  			<label class="text-center mx-auto" for="exampleFormControlInput1">Aid olduğu ölkə</label>
-						  			<select class="form-select" aria-label="Default select example">
+						  			<label class="text-center mx-auto" id="country">Aid olduğu ölkə</label>
+						  			<select class="form-select" aria-label="Ölkələr">
 										<option selected>Azərbaycan</option>
 										<option value="1">Türkiyə</option>
 										<option value="2">Rusiya</option>
@@ -348,6 +348,29 @@
 									</select>				
 						  		</div>
 						  		
+
+						  		<div class="col-md-4">
+						  			<label class="text-center mx-auto" id="region" >Aid olduğu bölgə</label>
+						  			<select class="form-select" aria-label="Bölgələr">
+						  				<option selected>Bakı</option>
+										<option selected>Abşeron</option>
+										<option value="1">Quba-Xaçmaz</option>
+										<option value="2">Dağlıq Şirvan</option>
+										<option value="3">Şəki-Zaqatala</option>
+										<option value="4">Aran</option>
+										<option value="5">Gəncə-Qazax</option>
+										<option value="6">Yuxarı Qarabağ</option>
+										<option value="7">Kəlbəcər-Laçın</option>
+										<option value="8">Lənkəran</option>
+										<option value="9">Naxçıvan</option>
+									</select>				
+						  		</div>
+
+
+						  		<script type="text/javascript">
+						  			$("#country").change(function () {
+ 									 $('#region').prop('disabled', false);  });
+						  		</script>
 						  	</div>						    
 						  </div>
 						</form>
@@ -360,7 +383,8 @@
 							    <li class="page-item disabled"><a class="page-link" href="#">Əvvəlki</a></li>
 							    <li class="page-item active"><a class="page-link" href="#">1</a></li>
 							    <li class="page-item"><a class="page-link" href="#">2</a></li>
-							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item"><a class="page-lin
+							    	k" href="#">3</a></li>
 							    <li class="page-item"><a class="page-link" href="#">Növbəti</a></li>
 							  </ul>
 							</nav>
