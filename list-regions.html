@@ -278,7 +278,7 @@
 					<div class="card-header pt-3">
 						<h3 class="col-md-4">Bölgələrin Siyahısı</h3>
 						<div class="col float-end" >
-							<button id="save" type="button" class="btn btn-primary btn-md float-end">Yeni</button>
+							<button id="new" type="button" class="btn btn-primary btn-md float-end">Yeni</button>
 						</div>
 						<!-- <div class="col-md-7 float-end me-3">
 							<input class="form-control float-end" style="width: 200px;" type="text" id="tablesearch" onkeyup="myFunction()" placeholder="Axtar..">
@@ -450,33 +450,35 @@
 				</div>				
 			</div>
 		</div>
-		<div class="col-md-3 fixed-tr float-end alert alert-success hidden" role="alertsaved" id="saved">
+		
+	</footer>
+
+	<!-- begin::Modal -->
+
+	<div class="col-md-3 fixed-tr float-end alert alert-success hidden" role="alertsaved" id="saved">
 		  Yadda saxlanıldı!
 		</div>
 		<div class="col-md-3 fixed-tr float-end alert alert-danger hidden" role="alertdeleted" id="deleted">
 		  Uğurla silindi!
-		</div>
-	</footer>
-
-	<!-- Modal -->
-<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Əminsiniz?</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Seçdiyiniz məlumatlar silinsin?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İmtina</button>
-        <button type="submit" class="btn btn-danger" data-bs-dismiss="alert" id="deleteOk">Sil</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+	</div>
+	<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="deleteModalLabel">Əminsiniz?</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Seçdiyiniz məlumatlar silinsin?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İmtina</button>
+	        <button type="submit" class="btn btn-danger" data-bs-dismiss="alert" id="deleteOk">Sil</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- end::Modal -->
 
 
 
@@ -500,9 +502,15 @@
 	<script type="text/javascript" src="assets/js/bootstrap-table-export.min.js"></script>
 	<!-- end:scripts -->
 
+
+<!-- begin::Modal Script -->
+
+
 <script type="text/javascript">
 	$(document).ready(function(){
 
+
+	/*save alert*/
   $("#save").click(function(){
     $("div#saved").fadeIn( "slow").fadeOut(3000);
 /*
@@ -513,7 +521,7 @@
     */
   });
 
-
+  	/*delete alert*/
     $("#delete, #delete2, #delete3").click(function(){
 
     	$('#deleteModal').modal('show');
@@ -531,13 +539,10 @@
 
   });
 
-
-
-
-
-
 });
+
 </script>
+<!-- end::Modal Script -->
 
 
 </body>

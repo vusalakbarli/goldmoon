@@ -2361,9 +2361,10 @@ textarea.form-control-lg {
   appearance: none;
 }
 .form-select:focus {
-  border-color: #86b7fe;
+  /*border-color: #86b7fe;*/
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /*box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);*/
+  border-color: #69b3ff;
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
@@ -2428,9 +2429,10 @@ textarea.form-control-lg {
   filter: brightness(90%);
 }
 .form-check-input:focus {
-  border-color: #86b7fe;
+  /*border-color: #86b7fe;*/
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /*box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);*/
+  border-color: #69b3ff;
 }
 .form-check-input:checked {
   background-color: #0d6efd;
@@ -2920,7 +2922,7 @@ textarea.form-control-lg {
 }
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /*box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);*/
 }
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
   pointer-events: none;
@@ -4444,9 +4446,9 @@ textarea.form-control-lg {
 }
 .accordion-button:focus {
   z-index: 3;
-  border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /*box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);*/
+  border-color: #69b3ff;
 }
 
 .accordion-header {
@@ -4554,7 +4556,9 @@ textarea.form-control-lg {
   color: #0a58ca;
   background-color: #e9ecef;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /*box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);*/
+  color: #3f4254;
+  border-color: #69b3ff;
 }
 
 .page-item:not(:first-child) .page-link {
@@ -5137,8 +5141,9 @@ textarea.form-control-lg {
 }
 .btn-close:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /*box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);*/
   opacity: 1;
+  border-color: #69b3ff;
 }
 .btn-close:disabled, .btn-close.disabled {
   pointer-events: none;
