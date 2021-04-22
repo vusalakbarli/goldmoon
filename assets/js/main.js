@@ -1,6 +1,12 @@
+
+
+
 const $dropdown = $(".dropdown");
+const $subDropdown = $(".sub-dropdown");
 const $dropdownToggle = $(".dropdown-toggle");
 const $dropdownMenu = $(".dropdown-menu");
+const $dropdownItem = $(".dropdown-item");
+const $dropdownSubmenuMenu = $(".dropdown-menu .sub-dropdown-menu");
 const showClass = "show";
 
 $(window).on("load resize", function() {
@@ -19,12 +25,46 @@ $(window).on("load resize", function() {
         $this.find($dropdownMenu).removeClass(showClass);
       }
     );
-  } else {
+  } 
+
+
+
+  else if (this.matchMedia("(max-width: 768px)").matches) {
+    $dropdown.on('click', 
+      function() {
+        const $this = $(this);
+        $this.toggleClass(showClass);
+        $this.find($dropdownMenu).toggleClass(showClass);
+      });
+
+    $subDropdown.on('click', 
+      function() {
+        const $this = $(this);
+        $this.toggleClass(showClass);
+        $this.find($dropdownSubmenuMenu).toggleClass(showClass);
+      });
+
+  }
+
+
+  else {
     $dropdown.off("mouseenter mouseleave");
   }
+
 });
 
 
+/*
+
+  $('.dropdown-toggle').on('click', function(e) {
+      $('.dropdown-menu').toggleClass("show"); //you can list several class names 
+      e.preventDefault();
+    });
+
+     $('.dropdown-item').on('click', function(e) {
+      $('.dropdown-menu').toggleClass("show"); //you can list several class names 
+      e.preventDefault();
+    });*/
 
 
   window.addEventListener("resize", function() {
