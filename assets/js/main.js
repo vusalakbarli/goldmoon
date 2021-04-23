@@ -28,7 +28,7 @@ $(window).on("load resize", function() {
   } 
 
 
-
+/*
   else if (this.matchMedia("(max-width: 768px)").matches) {
     $dropdown.on('click', 
       function() {
@@ -44,7 +44,7 @@ $(window).on("load resize", function() {
         $this.find($dropdownSubmenuMenu).toggleClass(showClass);
       });
 
-  }
+  }*/
 
 
   else {
@@ -54,6 +54,15 @@ $(window).on("load resize", function() {
 });
 
 
+
+
+
+/*
+        $('span.navbar-toggler-icon').click(function() {
+            $('#navbar').toggle();
+        });
+    
+*/
 /*
 
   $('.dropdown-toggle').on('click', function(e) {
@@ -161,11 +170,43 @@ $(document).ready(function() {
 });
 
 
-/*daterange*/
-/*$(function() {
+
+
+/*data and time script*/
+$(function() {
   $('input[name="daterange"]').daterangepicker({
     opens: 'left'
   }, function(start, end, label) {
     console.log("A new date selection was made: " + start.format('DD.MM.YYYY') + ' to ' + end.format('DD.MM.YYYY'));
   });
-});*/
+});
+
+
+  
+
+
+
+    $(document).ready(function(){
+      
+      $("#delete, #delete1, #delete2, #delete3").click(function(){
+
+          $('#deleteModal').modal('show');
+          });
+
+            $("#deleteOk").click(function showdeleted() {
+
+            $("#deleteModal").modal('hide');
+
+              setTimeout(function(){
+
+                $("div#deleted").fadeIn( "slow").fadeOut(3000);
+            }, 1000);
+              
+
+          });
+
+      });
+
+  
+
+
