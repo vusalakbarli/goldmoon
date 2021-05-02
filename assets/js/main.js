@@ -74,11 +74,12 @@ $(window).on("load resize", function() {
       $('.dropdown-menu').toggleClass("show"); //you can list several class names 
       e.preventDefault();
     });*/
-
+/*
 
   window.addEventListener("resize", function() {
     "use strict"; window.location.reload(); 
   });
+*/
 
   document.addEventListener("DOMContentLoaded", function(){
         
