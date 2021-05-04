@@ -612,3 +612,22 @@ ul.dropdown-menu {
 .select2-container--default .select2-search--dropdown .select2-search__field {
   border: none !important;
 }
+
+
+
+        .dual-list .list-group {
+            margin-top: 8px;
+            background-color: 
+        }
+
+        .list-left li, .list-right li {
+            cursor: pointer;
+        }
+
+        .list-arrows {
+            padding-top: 100px;
+        }
+
+            .list-arrows button {
+                margin-bottom: 20px;
+            }
