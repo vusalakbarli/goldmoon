@@ -166,73 +166,165 @@
 					<!-- begin::cards -->
 					<div class="cards">
 						<div class="card-header pt-3 mb-3">
-							<h3 class="col-md-4">Atribut tipi</h3>
+							<h3 class="col-md-4">Atribut seçimi</h3>
 							<!-- <div class="col float-end">
 								<a class="btn btn-primary btn-md float-end" href="add-region.html">Yeni</a>
 							</div> -->
-							<div class="col-md-4 float-end">
-								<div class="input-group mb-3">
-									<input type="text" class="form-control" placeholder="Yeni atribut növü" aria-label="Yeni atribut növü" aria-describedby="button-addon2" id="newattribute">
-									<button class="btn btn-outline-primary move-right" type="button" id="button-addon2"><i class="fas fa-arrow-down"></i></button>
-								</div>
-							</div>
+							
 						</div>
-						<div class="card-body mb-3">
-							<div class="row justify-content-md-center pt-5">
-								<div class="col-md-8 p-0">
-									<!-- begin::atribut tipleri -->
-									<div class="col-md-6 border">
-											<h4 class="p-3">Attribut tipləri</h4>
-									    <div class="list-group type-attribute" id="list-tab" role="tablist">
+						<div class="card-body mb-sm-5">
+							<div class="row justify-content-md-center">
+								<!-- begin::atribut tipleri -->
+								<div class="col col-md-4 me-5 col-sm-12">
+									<div class="col-md-12 h-sm col-sm-12 py-sm-5">
+										<h5 class="mb-0 pt-2">Atribut tipləri</h5>										
+									</div>
+									<div class="cards p-0 dual-list">
+										<div class="list-group type-attribute m-0" id="list-tab" role="tablist">
 									      <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#list-ehtiyyat" role="tab">Ehtiyyat hissələri</a>
 									      <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-obyekt" role="tab">Obyekt tipləri</a>
 									      <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-techizat" role="tab">Təchizat tipləri</a>
 									      <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-cihaz" role="tab">Cihaz ölçüləri</a>
+
 									    </div>
 									</div>
-									<!-- end::atribut tipleri -->
-
-									<div class="col-md-6 border">
-											<h4 class="p-3">Attribut növləri</h4>
-									    <div class="tab-content" id="nav-tabContent">
+								</div>
+								<!-- end::atribut tipleri -->
+								<!-- begin::atribut-novleri -->
+								<div class="col col-md-4 col-sm-12">
+									<div class="col-md-12 h-sm col-sm-12 py-sm-5">
+										<div class="input-group pb-4">
+											<input type="text" class="form-control" placeholder="Yeni atribut növü" aria-label="Yeni atribut növü" aria-describedby="button-addon2" id="newattribute">
+											<button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="fas fa-arrow-down"></i></button>
+										</div>
+									</div>									
+									
+									<div class="cards p-0 dual-list">
+										<div class="tab-content" id="nav-tabContent">
 									    	<!-- begin::ehtiyyat-hisseleri -->
 									      	<div class="tab-pane fade show active" id="list-ehtiyyat" role="tabpanel">
-									      		<div class="list-attribute-item col-md-12">
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
 									      			<div class="col-md-9 pt-2">Qaz</div>
-										      		<div class="col-md-3">
+										      		<div class="col-md-3 float-end">
 											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
 														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
 										      		</div>
 									      		</div>
-									      		<div id="klon" class="list-attribute-item col-md-12">
+									      		<div id="klon" class="list-attribute-item col-md-12 col-sm-12">
 									      			<div class="col-md-9 pt-2" id="nameattribute">
 										      			Dizel
 										      		</div>
-										      		<div class="col-md-3">
+										      		<div class="col-md-3 float-end">
 											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
 														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
 										      		</div>
-									      		</div>									      		
+									      		</div>
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Qaz
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Dizel
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Kömür
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>								      		
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Benzin
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Kömür
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Qaz
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Dizel
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>
+									      		<div class="list-attribute-item col-md-12 col-sm-12">
+									      			<div class="col-md-9 pt-2" id="nameattribute">
+										      			Kömür
+										      		</div>
+										      		<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete1" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+									      		</div>
 									  		</div>
 									  		<!-- end::ehtiyyat-hisseleri -->
 
 									  		<!-- begin::obyekt-tipleri -->
 									  		<div class="tab-pane fade" id="list-obyekt" role="tabpanel">
-												<div class="list-attribute-item col-md-12">
+												<div class="list-attribute-item col-md-12 col-sm-12">
 													<div class="col-md-9 pt-2">Kömür</div>
-											    	<div class="col-md-3">
+											    	<div class="col-md-3 float-end">
 											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
 														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
 										      		</div>
-												</div>												
+												</div>
+												<div class="list-attribute-item col-md-12 col-sm-12">
+													<div class="col-md-9 pt-2">Qaz</div>
+											    	<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+												</div>	
+												<div class="list-attribute-item col-md-12 col-sm-12">
+													<div class="col-md-9 pt-2">Dizel</div>
+											    	<div class="col-md-3 float-end">
+											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
+														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
+										      		</div>
+												</div>											
 											</div>
 									  		<!-- end::obyekt-tipleri -->
 
 											<!-- begin::techizat-tipleri -->
 									  		<div class="tab-pane fade" id="list-techizat" role="tabpanel">
-												<div class="list-attribute-item col-md-12">
+												<div class="list-attribute-item col-md-12 col-sm-12">
 													<div class="col-md-9 pt-2">Dizel</div>
-											    	<div class="col-md-3">
+											    	<div class="col-md-3 float-end">
 											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
 														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
 										      		</div>
@@ -242,9 +334,9 @@
 
 									  		<!-- begin::cihaz-olculeri -->
 									  		<div class="tab-pane fade" id="list-cihaz" role="tabpanel">
-												<div class="list-attribute-item col-md-12">
+												<div class="list-attribute-item col-md-12 col-sm-12">
 													<div class="col-md-9 pt-2">Qaz</div>
-											    	<div class="col-md-3">
+											    	<div class="col-md-3 float-end">
 											    		<a href="#" class="btn btn-icon mr-sm btn-xs" title="Düzəliş et"> <i class="fas fa-edit fa-sm text-warning"></i> </a>
 														<a id="delete" href="#" class="btn btn-icon mr-sm btn-xs delete2" title="Sil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fas fa-trash fa-sm text-danger"></i> </a>
 										      		</div>
@@ -254,7 +346,9 @@
 
 									    </div>
 									</div>
-								</div>							  
+								    
+								</div>
+								<!-- end::atribut::novleri -->					  
 							</div>
 						</div>
 
