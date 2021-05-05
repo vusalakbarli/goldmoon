@@ -617,9 +617,16 @@ ul.dropdown-menu {
 
 /* dual-table */
 
+.dual-list {
+  max-height: 300px !important;
+  overflow-y: scroll;
+  min-height: 300px !important
+}
+
 .dual-list .list-group {
   margin-top: 8px;
-  background-color: 
+  background-color: #ffffff;
+
 }
 
 .list-left li, .list-right li {
@@ -630,6 +637,11 @@ ul.dropdown-menu {
   padding-top: 100px;
 }
 
+@media (max-width: 991px) {
+  .list-arrows {
+  padding-top: 30px;
+}
+}
 .list-arrows button {
     margin-bottom: 20px;
 }
@@ -663,7 +675,7 @@ ul.dropdown-menu {
 
 
 
-.list-group-item:last-child {
+.list-group-item.type-attribute:last-child {
 border-bottom:0px !important;
 }
 
@@ -680,3 +692,4 @@ border-top: 1px solid #dee2e6 !important;
 .radius-xs {
   border-radius: 0.25rem !important;
 }
+
