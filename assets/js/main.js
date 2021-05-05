@@ -209,45 +209,74 @@ $(function() {
       });
 
   
+/*double table */
+
+  $(function () {
+
+      $('body').on('click', '.list-group li.list-group-item', function () {
+          $(this).toggleClass('active');
+      });
+      $('.list-arrows button').click(function () {
+          var $button = $(this), actives = '';
+          if ($button.hasClass('move-left')) {
+              actives = $('.list-right ul li.active');
+              actives.clone().appendTo('.list-left ul');
+              actives.remove();
+          } else if ($button.hasClass('move-right')) {
+              actives = $('.list-left ul li.active');
+              actives.clone().appendTo('.list-right ul');
+              actives.remove();
+          }
+      });
+      $('.dual-list .selector').click(function () {
+          var $checkBox = $(this);
+          if (!$checkBox.hasClass('selected')) {
+              $checkBox.addClass('selected').closest('.well').find('ul li:not(.active)').addClass('active');
+              $checkBox.children('i').removeClass('glyphicon-unchecked').addClass('glyphicon-check');
+          } else {
+              $checkBox.removeClass('selected').closest('.well').find('ul li.active').removeClass('active');
+              $checkBox.children('i').removeClass('glyphicon-check').addClass('glyphicon-unchecked');
+          }
+      });
+      $('[name="SearchDualList"]').keyup(function (e) {
+          var code = e.keyCode || e.which;
+          if (code == '9') return;
+          if (code == '27') $(this).val(null);
+          var $rows = $(this).closest('.dual-list').find('.list-group li');
+          var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+          $rows.show().filter(function () {
+              var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+              return !~text.indexOf(val);
+          }).hide();
+      });
+
+  });
 
 
-        $(function () {
 
-            $('body').on('click', '.list-group .list-group-item', function () {
-                $(this).toggleClass('active');
-            });
-            $('.list-arrows button').click(function () {
-                var $button = $(this), actives = '';
-                if ($button.hasClass('move-left')) {
-                    actives = $('.list-right ul li.active');
-                    actives.clone().appendTo('.list-left ul');
-                    actives.remove();
-                } else if ($button.hasClass('move-right')) {
-                    actives = $('.list-left ul li.active');
-                    actives.clone().appendTo('.list-right ul');
-                    actives.remove();
-                }
-            });
-            $('.dual-list .selector').click(function () {
-                var $checkBox = $(this);
-                if (!$checkBox.hasClass('selected')) {
-                    $checkBox.addClass('selected').closest('.well').find('ul li:not(.active)').addClass('active');
-                    $checkBox.children('i').removeClass('glyphicon-unchecked').addClass('glyphicon-check');
-                } else {
-                    $checkBox.removeClass('selected').closest('.well').find('ul li.active').removeClass('active');
-                    $checkBox.children('i').removeClass('glyphicon-check').addClass('glyphicon-unchecked');
-                }
-            });
-            $('[name="SearchDualList"]').keyup(function (e) {
-                var code = e.keyCode || e.which;
-                if (code == '9') return;
-                if (code == '27') $(this).val(null);
-                var $rows = $(this).closest('.dual-list').find('.list-group li');
-                var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-                $rows.show().filter(function () {
-                    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-                    return !~text.indexOf(val);
-                }).hide();
-            });
+/*
+$('#button-addon2').click(function(){
 
-        });
+        var str = $("#newattribute").val();
+
+
+  // get the last DIV which ID starts with ^= "klon"
+  var $div = $('div[id^="klon"]:last');
+
+  // Read the Number from that DIV's ID (i.e: 3 from "klon3")
+  // And increment that number by 1
+  var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+
+  // Clone it and assign the new ID (i.e: from num 4 to ID "klon4")
+  var $klon = $div.clone().prop('id', 'klon');
+
+  // Finally insert $klon wherever you want
+  $div.after($klon).alert(str);
+  
+
+
+});
+
+*/
+
+
