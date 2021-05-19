@@ -399,6 +399,16 @@ ul.dropdown-menu {
     margin-left: 10px !important;
   }
 
+
+
+}
+
+@media (max-width: 768px) {
+    a.navbar-brand, a.navbar-brand img  {
+    margin: auto !important;
+    text-align: center !important;
+    height: 60px !important
+  }
 }
 
 
@@ -706,3 +716,4 @@ border-top: 1px solid #dee2e6 !important;
 .h-sm {
   height: 50px !important
 }
+
